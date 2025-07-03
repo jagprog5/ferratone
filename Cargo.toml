@@ -1,0 +1,11 @@
+[package]
+name = "ferratone"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sdl3-sys = {version="0.5.2", features=["build-from-source"], optional = true}
+
+[features]
+default = [ "sdl3" ]
+sdl3 = ["dep:sdl3-sys"]
